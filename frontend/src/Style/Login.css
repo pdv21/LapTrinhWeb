@@ -1,0 +1,192 @@
+/* Login.css */
+
+/* === Variables === */
+:root {
+  --bg-page: #0d111a;
+  --bg-gradient-start: #161b22;
+  --bg-gradient-end: #010409;
+  --bg-container: #161b22;
+  --input-bg: rgba(255, 255, 255, 0.08);
+  --input-border: rgba(255, 255, 255, 0.15);
+  --accent: #58a6ff;
+  --accent-hover: #1a73e8;
+  --text-light: #c9d1d9;
+  --text-white: #ffffff;
+  --error-red: #ff6a6a;
+  --radius: 10px;
+}
+
+/* === Full-screen wrapper === */
+.login-page {
+  position: relative;
+  background: radial-gradient(circle at top left,
+                              var(--bg-gradient-start) 0%,
+                              var(--bg-gradient-end) 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; /* header – form – footer theo cột */
+  align-items: center;    /* ← bổ sung: căn giữa ngang */
+  font-family: "Segoe UI", Roboto, sans-serif;
+  color: var(--text-light);
+  align-items: center;
+}
+.login-page .main-content {
+  flex: 1;                      /* chiếm toàn bộ khoảng trống ở giữa */
+  display: flex;
+  justify-content: center;      /* căn giữa ngang */
+  align-items: center;          /* căn giữa dọc */
+  width: 100%;
+}
+
+/* === Header === */
+.login-page .header {
+  width: 100%;
+  background: linear-gradient(135deg, #111920 0%, #171a21 60%, #0d141b 100%);
+  border-bottom: 2px solid var(--accent);
+}
+.login-page .header .header-content {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* ← thêm dòng này để căn giữa logo */
+}
+.login-page .header-logo {
+  height: 32px;
+}
+
+
+/* === Container (login form) === */
+.login-page .login-container {
+  background-color: var(--bg-container);
+  padding: 48px 36px;
+  border-radius: var(--radius);
+  width: 360px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
+  
+}
+
+/* === Title === */
+.login-page .login-container h2 {
+  font-size: 26px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 28px;
+  color: var(--text-white);
+  letter-spacing: 0.5px;
+}
+
+/* === Inputs === */
+.login-page .login-container input {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 16px;
+  background-color: var(--input-bg);
+  border: 1px solid var(--input-border);
+  border-radius: var(--radius);
+  color: var(--text-white);
+  font-size: 15px;
+  box-sizing: border-box;
+}
+.login-page .login-container input::placeholder {
+  color: var(--text-light);
+}
+.login-page .login-container input:focus {
+  outline: none;
+  border-color: var(--accent);
+  background-color: rgba(88, 166, 255, 0.05);
+}
+
+/* === Submit button === */
+.login-page .login-container button[type="submit"] {
+  width: 100%;
+  padding: 14px;
+  background-color: var(--accent);
+  color: var(--text-white);
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+.login-page .login-container button[type="submit"]:hover {
+  background-color: var(--accent-hover);
+}
+
+/* === Error message === */
+.login-page .login-container .error-msg {
+  color: var(--error-red);
+  font-size: 13px;
+  margin-top: 8px;
+  text-align: left;
+}
+
+/* === Toggle Auth text === */
+.login-page .login-container .toggle-auth {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;               /* khoảng cách giữa text và link */
+  margin-top: 24px;       /* cách so với nút submit */
+  font-size: 14px;
+  color: var(--text-light);
+}
+.login-page .login-container .toggle-auth span {
+  color: var(--accent);
+  cursor: pointer;
+  text-decoration: underline;
+}
+.login-page .login-container .toggle-auth span:hover {
+  color: var(--accent-hover);
+}
+
+/* === Site Footer === */
+.login-page .footer {
+  flex-shrink: 0;  
+  width: 100%;
+  background-color: linear-gradient(135deg, #111920 0%, #171a21 60%, #0d141b 100%);
+  border-top: 1px solid var(--accent);
+  padding: 24px 20px;
+  box-sizing: border-box;
+}
+.login-page .footer .footer-content {
+  max-width: 1024px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 24px;
+  color: var(--text-light);
+  font-size: 14px;
+  line-height: 1.6;
+}
+.login-page .footer-left {
+  flex: 1 1 280px;
+}
+.login-page .footer-left .footer-logo {
+  width: 140px;
+  display: block;
+  margin-bottom: 16px;
+}
+.login-page .footer-left p {
+  margin: 4px 0;
+}
+.login-page .footer-links {
+  display: flex;
+  flex: 1 1 300px;
+  gap: 40px;
+}
+.login-page .footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.login-page .footer-links ul li {
+  margin: 6px 0;
+  cursor: pointer;
+}
+.login-page .footer-links ul li:hover {
+  color: var(--accent);
+}

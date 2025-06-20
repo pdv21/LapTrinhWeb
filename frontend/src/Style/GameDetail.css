@@ -1,0 +1,381 @@
+body {
+  background-color: #1b2838;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  }
+  
+  .game-detail {
+  background-color: #1b2838;
+  }
+  
+  .detail-header {
+  background-color: #171a21;
+  padding: 15px 0;
+  }
+  
+  .detail-header .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  }
+  
+  .detail-header .steam-logo {
+  cursor: pointer;
+  }
+  
+  .detail-header .steam-logo img {
+  height: 32px;
+  }
+  
+  .user-actions a {
+  color: #fff;
+  margin-left: 20px;
+  text-decoration: none;
+  font-size: 14px;
+  }
+  
+  .detail-banner {
+  width: 100%;
+  max-height: 400px;
+  overflow: hidden;
+  }
+  
+  .detail-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 8px;
+  }
+  
+  .detail-main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+  }
+  
+  .detail-left {
+  flex: 1 1 400px;
+  max-width: 500px;
+  }
+  
+  .detail-left h2 {
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 12px;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.7);
+  }
+  
+  .description {
+  font-size: 18px;
+  color: #d8e6f2;
+  text-align: center;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  }
+  
+  .detail-buy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 15px;
+  }
+  
+  .detail-buy .price {
+  font-size: 22px;
+  font-weight: bold;
+  color: #1a9fff;
+  margin-bottom: 10px;
+  }
+  
+  .buy-button {
+  background-color: #1a9fff;
+  border: none;
+  color: #fff;
+  padding: 10px 14px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  }
+  
+  .buy-button\:hover {
+  background-color: #147bcd;
+  }
+  
+  .detail-left hr {
+  border: 0.5px solid #444c54;
+  margin: 20px 0;
+  }
+  
+  .submit-review {
+  width: 90%;
+  max-width: 1000px;
+  margin: 60px auto 0;
+  padding: 36px 24px;
+  background: rgba(42,71,94,0.95);
+  backdrop-filter: blur(4px);
+  border: 1px solid #34506a;
+  border-radius: 18px;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.22);
+  }
+  
+  .submit-review h4 {
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 28px;
+  }
+  
+  .form-group {
+  margin-bottom: 20px;
+  }
+  
+  .form-group label {
+  display: block;
+  font-size: 15px;
+  color: #c7d5e0;
+  margin-bottom: 8px;
+  }
+  
+  .rating-select,
+  .review-textarea {
+  width: 100%;
+  background: #1a2533;
+  color: #d8e6f2;
+  border: 1px solid #2f3f55;
+  border-radius: 8px;
+  font-size: 15px;
+  padding: 14px 16px;
+  transition: border 0.25s, box-shadow 0.25s;
+  box-sizing: border-box;
+  }
+  
+  .rating-select\:focus,
+  .review-textarea\:focus {
+  outline: none;
+  border-color: #1a9fff;
+  box-shadow: 0 0 0 2px rgba(26,159,255,0.4);
+  }
+  
+  .review-textarea::placeholder {
+  color: #74808f;
+  opacity: 0.9;
+  }
+  
+  .submit-btn {
+  display: block;
+  margin: 20px auto 0;
+  padding: 10px 24px;
+  max-width: 240px;
+  background: linear-gradient(135deg,#1a9fff 0%,#1694ee 60%,#1485d1 100%);
+  border: none;
+  color: #fff;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.18s ease,box-shadow 0.18s ease;
+  }
+  
+  .submit-btn\:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(26,159,255,0.35);
+  }
+  
+  .submit-btn\:active {
+  transform: none;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.4);
+  }
+  
+  .reviews-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 30px;
+  }
+  
+  .review-item {
+  background: linear-gradient(135deg, #2a475e 0%, #1f3546 100%);
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .review-item\:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.5);
+  }
+  
+  .review-item strong {
+  display: block;
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 6px;
+  }
+  
+  .review-stars {
+  display: block;
+  font-size: 16px;
+  color: #f5c518;
+  margin-bottom: 12px;
+  }
+  
+  .review-item p {
+  font-size: 15px;
+  color: #e1e8f0;
+  line-height: 1.5;
+  margin-bottom: 16px;
+  }
+  
+  .detail-right {
+  flex: 1 1 400px;
+  max-width: 500px;
+  }
+  
+  .detail-screenshot {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-bottom: 20px;
+  }
+  
+  .system-req {
+  background-color: #2a475e;
+  padding: 15px;
+  border-radius: 8px;
+  }
+  
+  .system-req h3 {
+  font-size: 18px;
+  text-align: center;
+  margin-top: 0;
+  }
+  
+  .system-req ul {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0;
+  }
+  
+  .system-req li {
+  font-size: 14px;
+  margin-bottom: 6px;
+  }
+  
+  .suggestion-section {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 40px auto;
+  max-width: 100%;
+  padding: 0 20px;
+  overflow-x: auto;
+  }
+  
+  .suggestion-card {
+  flex: 0 0 180px;
+  }
+  
+  .suggestion-card {
+  width: 180px;
+  background-color: #1e2733;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  }
+  
+  .suggestion-card\:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  }
+  
+  .suggestion-card a {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+  }
+  
+  .suggestion-image {
+  width: 100%;
+  padding-top: 56.25%;
+  position: relative;
+  background-color: #0f151f;
+  }
+  
+  .suggestion-image img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  }
+  
+  .suggestion-info {
+  padding: 0.75rem 0.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+  }
+  
+  .suggestion-info h5 {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  color: #fff;
+  }
+  
+  .suggestion-price {
+  font-size: 0.875rem;
+  color: #8fa3bf;
+  margin-top: auto;
+  }
+  
+  .suggestion-section .suggestion-image {
+  padding-top: 0;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+  
+  .suggestion-section .suggestion-image img {
+  position: static;
+  width: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  }
+  
+  .detail-extras h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #fff;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  }
+  
+  .detail-extras hr {
+  width: 80%;
+  margin: 0 auto;
+  border-color: #444c54;
+  }
+  

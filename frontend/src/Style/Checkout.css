@@ -1,0 +1,206 @@
+/* =================== TOÀN TRANG =================== */
+.checkout-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #0e1621;
+  color: #f0f0f0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.checkout-loading {
+  font-size: 20px;
+  text-align: center;
+  padding: 100px 0;
+}
+
+/* =================== HEADER =================== */
+.store-header {
+  background-color: #171a21;
+  padding: 16px 0;
+  box-shadow: 0 1px 8px rgba(26,159,255,0.05);
+}
+.nav {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.steam-logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #66c0f4;
+  cursor: pointer;
+  letter-spacing: 1px;
+  user-select: none;
+  transition: color 0.18s;
+}
+.steam-logo:hover {
+  color: #8fffce;
+}
+.user-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.download-btn, .cart-btn {
+  background: #1a9fff;
+  color: white;
+  border: none;
+  padding: 9px 19px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.25s, box-shadow 0.25s;
+  margin-left: 7px;
+  box-shadow: 0 2px 10px rgba(26,159,255,0.05);
+}
+.download-btn:hover, .cart-btn:hover {
+  background: #8fffce;
+  color: #151e29;
+}
+
+/* =================== MAIN (CHECKOUT CARD) =================== */
+.checkout-main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 36px 10px 24px 10px;
+}
+.checkout-container {
+  background: linear-gradient(135deg, #1b2838 75%, #233654 100%);
+  border-radius: 17px;
+  padding: 36px 32px 30px 32px;
+  max-width: 440px;
+  min-width: 320px;
+  width: 100%;
+  box-shadow: 0 10px 34px 0 rgba(22, 34, 54, 0.36), 0 2px 10px rgba(102,192,244,0.07);
+  text-align: center;
+  position: relative;
+  animation: fadeInUp 0.7s cubic-bezier(.39,.58,.57,1.01);
+}
+@keyframes fadeInUp {
+  from { transform: translateY(32px); opacity: 0;}
+  to { transform: translateY(0); opacity: 1;}
+}
+
+.checkout-title {
+  font-size: 26px;
+  font-weight: bold;
+  color: #66c0f4;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  letter-spacing: 0.5px;
+}
+
+/* =================== TÓM TẮT ĐƠN HÀNG & LIST GAME =================== */
+.order-summary {
+  background: rgba(27, 40, 56, 0.88);
+  border-radius: 8px;
+  padding: 18px 13px 12px 13px;
+  margin-bottom: 20px;
+  box-shadow: 0 1.5px 10px rgba(102,192,244,0.08);
+  text-align: left;
+}
+.order-summary h3 {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 13px;
+}
+
+.checkout-cart-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: rgba(24,34,47,0.97);
+  border-radius: 6px;
+  border: none;
+  overflow: hidden;
+  margin-bottom: 6px;
+}
+
+.checkout-cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 5px 12px 7px;
+  border-bottom: 1px solid #233043;
+  font-size: 17px;
+  color: #d8eafd;
+  transition: background 0.13s;
+}
+.checkout-cart-item:last-child {
+  border-bottom: none;
+}
+.checkout-cart-item:hover {
+  background: #202d3d;
+}
+
+.checkout-cart-item-name {
+  font-weight: 500;
+  flex: 1 1;
+  text-align: left;
+}
+
+.checkout-cart-item-price {
+  color: #66c0f4;
+  font-weight: bold;
+  min-width: 75px;
+  text-align: right;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Nếu có giá cũ gạch */
+.checkout-cart-item-price span[style*="line-through"] {
+  color: #ff8383 !important;
+  font-size: 14px !important;
+  margin-right: 8px;
+  opacity: 0.88;
+}
+
+/* =================== TỔNG TIỀN VÀ NÚT =================== */
+.checkout-footer {
+  margin-top: 16px;
+  text-align: right;
+}
+.checkout-cart-total {
+  font-size: 20px;
+  font-weight: bold;
+  color: #66c0f4;
+  margin-bottom: 16px;
+  letter-spacing: 0.3px;
+  text-align: left;
+  text-shadow: 0 1px 4px #15423821;
+}
+.checkout-btn {
+  padding: 14px 0;
+  background: #66c0f4;
+  color: #12292e;
+  font-weight: 700;
+  font-size: 18px;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.22s, color 0.22s, box-shadow 0.21s;
+  margin-top: 3px;
+}
+.checkout-btn:disabled {
+  background: #233654;
+  color: #aaa;
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+.checkout-btn:hover{
+  background: #559bd3;
+}

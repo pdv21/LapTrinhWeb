@@ -1,0 +1,317 @@
+/* Profile.css */
+
+:root {
+  --color-bg: #1b2838;
+  --color-bg-alt: #171a21;
+  --color-card: #2a475e;
+  --color-primary: #1a9fff;
+  --color-primary-d: #147bcd;
+  --color-text: #ffffff;
+  --color-text-alt: #b8b8b8;
+  --radius: 8px;
+  --transition: 0.3s ease;
+}
+
+/* Reset cơ bản */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Container tổng */
+.profile-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* HEADER */
+.store-header {
+  background-color: var(--color-bg-alt);
+  padding: 16px 32px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+.store-header .nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.steam-logo img {
+  height: 32px;
+  cursor: pointer;
+}
+.user-actions .btn-flat {
+  background: none;
+  border: none;
+  color: var(--color-text-alt);
+  font-size: 14px;
+  margin-left: 16px;
+  cursor: pointer;
+  transition: color var(--transition);
+}
+.user-actions .btn-flat:hover {
+  color: var(--color-primary);
+}
+
+/* THÔNG TIN CÁ NHÂN */
+.user-info {
+  background-color: var(--color-card);
+  width: 90%;
+  max-width: 1000px;
+  margin: 24px auto;
+  padding: 24px;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+.user-info h3 {
+  font-size: 24px;
+  margin-bottom: 16px;
+  color: var(--color-primary);
+}
+.user-info p {
+  font-size: 14px;
+  color: var(--color-text-alt);
+  margin: 8px 0;
+}
+
+/* MAIN CONTENT */
+.profile-container {
+  flex: 1;
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* SECTION CARD */
+.purchase-history,
+.user-reviews {
+  background-color: var(--color-card);
+  padding: 24px;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+.purchase-history h3,
+.user-reviews h3 {
+  font-size: 22px;
+  margin-bottom: 16px;
+  color: var(--color-primary);
+}
+
+/* LIST ITEM */
+.orders-list,
+.reviews-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.order-item,
+.review-item {
+  background-color: var(--color-bg-alt);
+  padding: 16px;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* ORDER META */
+.order-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.order-meta .order-id {
+  font-weight: bold;
+  color: var(--color-text);
+}
+.order-meta .order-date,
+.order-meta .order-total {
+  font-size: 14px;
+  color: var(--color-text-alt);
+}
+.order-meta button {
+  background-color: var(--color-primary);
+  border: none;
+  color: var(--color-text);
+  padding: 6px 12px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background-color var(--transition);
+}
+.order-meta button:hover {
+  background-color: var(--color-primary-d);
+}
+
+/* ORDER ITEMS */
+.order-items {
+  margin-top: 12px;
+  list-style: none;
+}
+.order-items li {
+  font-size: 14px;
+  color: var(--color-text);
+  margin-bottom: 4px;
+}
+
+/* REVIEW ITEM */
+.review-item strong {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+.review-item p {
+  font-size: 14px;
+  color: var(--color-text-alt);
+}
+
+/* Placeholder text */
+.placeholder-text {
+  font-style: italic;
+  color: var(--color-text-alt);
+}
+
+/* LOGOUT BUTTON */
+.logout-btn {
+  align-self: center;
+  margin: 24px 0;
+  padding: 12px 32px;
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  border: none;
+  border-radius: var(--radius);
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(26, 159, 255, 0.4);
+  transition: background-color var(--transition), transform var(--transition);
+}
+.logout-btn:hover {
+  background-color: var(--color-primary-d);
+  transform: translateY(-2px);
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 16px 0;
+  color: var(--color-text-alt);
+  font-size: 14px;
+  margin-top: auto;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .store-header .nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .user-actions .btn-flat {
+    margin-left: 0;
+    margin-top: 8px;
+  }
+  .order-meta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.user-info__actions {
+  margin-top: 1rem;
+}
+
+.btn-edit-info {
+  padding: 0.5rem 1rem;
+  border: 1px solid #4ac3ff;
+  border-radius: 4px;
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.btn-edit-info:hover {
+  background: rgba(74, 195, 255, 0.1);
+}
+/* Profile.css */
+
+/* Modal overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Modal content */
+.modal-content {
+  background: #fff;
+  padding: 1.5rem 2rem;
+  border-radius: 8px;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Form labels and inputs */
+.modal-content label {
+  display: block;
+  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
+  color: #333;
+}
+.modal-content input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.25rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+/* Modal action buttons */
+.modal-actions {
+  margin-top: 1rem;
+  text-align: right;
+}
+.modal-actions .btn-flat {
+  background: none;
+  border: none;
+  color: #007bff;
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin-right: 0.5rem;
+}
+.modal-actions .btn-submit {
+  background: #ccc;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.modal-actions .btn-submit:hover {
+  background: #b3b3b3;
+}
+
+/* Edit Info button styling */
+.btn-edit-info {
+  margin-top: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid #007bff;
+  background: transparent;
+  color: #007bff;
+  border-radius: 4px;
+  cursor: pointer;
+}
